@@ -1,0 +1,54 @@
+(defn commaNote[]
+  (fn [tree]
+      (insta/transform 
+         {:PitchCommas (fn [note num & rest] 
+                         (str (note 1) (- num)))}
+         tree)))
+
+(defn Note[]
+  (fn [tree]
+      (insta/transform 
+         {:Note (fn [note & rest] 
+                  (if (empty rest)
+                      (note 1)
+                     "ff"))
+          }
+         tree)))
+
+(defn aposNote[]
+  (fn [tree]
+      (insta/transform 
+         {:PitchApos (fn [note num & rest] 
+                       (str (note 1) num))}
+         tree)))
+
+(defn pitchTrans[]
+  (fn [tree]
+      (insta/transform 
+         {:Pitch 
+          (fn [p] p)
+         }
+         tree)))
+
+(defn numberField[]
+  (fn [tree]
+      (insta/transform 
+         {:Number 
+          (fn [num] 
+            (let [n (read-string num)]
+              (/ 1 n)))
+         }
+         tree)))
+
+
+  
+(defn transTime[]
+  (fn [tree]
+      (insta/transform 
+         {:Time (fn [v & args] 
+                  (case (count args)
+                   0 (if (= v "/"), (/ 1 2) , v)
+                   2  (second args) ))
+         }
+         tree)))
+          

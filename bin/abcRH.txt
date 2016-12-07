@@ -1,0 +1,177 @@
+
+fdg
+A^F/G/B/g/
+gce
+g +trill+d2
+[1 [G2B2d2g2] z :| [2 [G2B2d2g2] z
+Gce
+e/c/e/g/c'/g/
+c2 z
+[ce][Bd] z
+B/A/B/c/d/B/
+e/c/B/A/G/^F/
+[Ec][Ec][Ec]
+(cGE)
+c2 z
+eg/e/c
+(a^fd)
+c/G/c/e/G/c/
+(Gce)
+e/c/eg
+gb/d'/d
+c/e/g/d/A/^f/
+ecG
+f/e/d/e/f/g/
+[1 [G2B2d2g2] z :| [2 [G2B2d2g2] z
+D/^F/A/d/^f/a/
+[ce][ce][ce]
+f/e/f/d/c/B/
+^f/d/A/a/f/d/
+B/d/g/d/B
+[1 [G2B2d2g2] z :| [2 [G2B2d2g2] z
+e/c/G e
+Gce
+[1 [G2B2d2g2] z :| [2 [G2B2d2g2] z
+e/c/d/B/G
+Ad^f
+A/e/d/g/^f/a/
+g/b/g/d/B
+cGe
+gGG
+c/B/c/e/G/c/
+c/B/c/e/G
+B/c/d/B/A/G/
+gf/e/d/c/
+Af/d/A/B/
+c/B/c/G/E/C/
+gb/g/d/B/
+gg/d/b
+ec/e/g/c'/
+(ecG)
+ce/c/G
+c/G/e/c/g/e/
+(d/^c/)d/f/G/B/
+[ce][c/e/][d/f/][eg]
+[Ec][Ec][Ec]
+gbd
+d/B/G z
+ecG
+gec
+gce
+gf/e/d/c/
+ce/c/g
+e/c/B/G/A/^F/
+e/c/B/c/G
+e/g/c'/g/e/c/
+d/A/d^f
+^faf
+c/B/c/e/G/c/
+gb/g/d/g/
+(gec)
+^fa/f/d/f/
+g/b/d'/b/g
+f/e/d/c/B/d/
+gec
+c'/b/c'/g/e/c/
+[d^f][df][df]
+c'/b/c'/g/e/c/
+g/b/gd
+cC z
+c2 z
+d+turn+A^f
+[1 [G2B2d2g2] z :| [2 [G2B2d2g2] z
+d/B/G g
+c2 z
+c/G/e/c/g/e/
+ceG
+dd/g/b
+gce
+g/d/g/b/g/d/
+f/e/dg
+^f/a/d'/a/f/a/
+[1 [G2B2d2g2] z :| [2 [G2B2d2g2] z
+[Bd]g/b/d
+c2 z
+[1 [G2B2d2g2] z :| [2 [G2B2d2g2] z
+gec
+ecG
+g/^f/g/d/B/G/
+cGe
+^fad
+[1 [G2B2d2g2] z :| [2 [G2B2d2g2] z
+e/d/e/g/c'/g/
+^f/d/A f
+c/e/c/G/E
+e/d/e/g/c'/g/
+^fa/f/d/f/
+Ad/c/B/A/
+[1 [G2B2d2g2] z :| [2 [G2B2d2g2] z
+(egc')
+d/f/d/f/B/d/
+([B/d/][A/c/])([A/c/][G/B/])([G/B/][^F/A/])
+c2 z
+ecG
+fdB
+[Bd][Bd][Bd]
+c/G/e/c/g/e/
+d/f/a/f/d/B/
+d/A/d/^f/a/f/
+e/a/g/b/^f/a/
+e/c/g/e/c'/g/
+d'a/^f/d/A/
+gb/g/d
+g/^f/g/b/d
+[1 [G2B2d2g2] z :| [2 [G2B2d2g2] z
+[Ec][Ec][Ec]
+g/e/d/B/G
+c/G/c/e/g/[c/e/]
+[1 [G2B2d2g2] z :| [2 [G2B2d2g2] z
+Bdg
+a/g/^f/g/d
+[Ec][Ec][Ec]
+c2 z
+[ce][B/d/][G/B/]G
+dg/d/B/d/
+A/e/[B/d/][A/c/][G/B/][^F/A/]
+^ff/d/a
+c'/b/c'/g/e/c/
+cGe
+[Ad^f] +trill+f2
+g/b/g/b/d
+AA/d/^f
+d/e/f/d/c/B/
+cGe
+gd/B/G
+gce
+d/f/A/d/B/d/
+[^Fd][d^f][fa]
+e/c'/b/g/a/^f/
+c'/b/c'/g/e/c/
+f/d/AB
+[Gce] +trill+e2
+c2 z
+gf/e/d/c/
+d/A/^f/d/a/f/
+d/^c/d/^f/a/f/
+g/b/g/d/B/G/
+c/G/e/c/g
+e/d/e/g/c'/g/
+Bd/B/A/G/
+e/g/d/c/B/A/
+c/B/c/e/G/c/
+[^Fd][Fd][Fd]
+e/d/e/g/c'/g/
+g/^f/g/d/B/G/
+d G2
+(dBG)
+d/b/g/d/B
+cc/d/e
+gf/e/d/c/
+e/g/d/g/A/^f/
+c2 z
+B/c/d/e/f/d/
+c2 z
+f/a/ A B/d/
+Gce
+e/c/B/d/g
+a/g/b/g/d/g/
