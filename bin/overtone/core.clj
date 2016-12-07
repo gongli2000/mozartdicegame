@@ -1,11 +1,8 @@
 (ns overtone.core  
   (:use [leipzig melody scale live chord]
         [overtone.inst.piano]
-        [overtone.music.pitch :as om]
-      
    )
-  (:require [overtone.live :as ot]
-             ))
+  (:require [overtone.live :as ot]))
 
    
 (defmethod play-note :default [{midi :pitch}] (piano midi))
@@ -44,7 +41,7 @@
 
 
 (def p (phrase
-         [8 8 8]
+         [1 1 1]
          [(-> triad (root 3)) (-> triad (root 5))
           (-> triad (inversion 2) (root 4))]))
 
@@ -57,16 +54,10 @@
 (def nn  (range 66 94))
 (def dur (repeat (count nn) 1/4))
 (def p3 (phrase dur nn))
-
-
-
-
- 
- 
- 
-
-
 ;
-;
-;(play-melody p 60 (comp C major))
+
+(defmacro makekey[ & args ]
+  `(def ~(symbol (apply str args)) (comp ~@args)))
+(macroexpand-1 '(makekey B flat major))
+(play-melody p 123 (comp B flat major))
 ;(play-melody2 p2 60 )
