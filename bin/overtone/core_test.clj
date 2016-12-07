@@ -36,7 +36,7 @@
 "G'''"  [:ABC [:Note "G3"]]
 )
 
-;(run-tests)
+(run-tests)
 ;  
 
 
@@ -62,7 +62,7 @@
 
 
 
-;(applytrans (abcparser "g/"))
+(applytrans (abcparser "g/"))
 ;(applytrans (abcparser "^g"))
 ;(doseq  [i (range 20)]
 ;  (println i (rh i))

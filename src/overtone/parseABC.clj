@@ -73,11 +73,8 @@
         ((make-trans :Number))
        ((make-trans :Time))
        ((make-trans :Token))
-    ((make-trans :Accidental))
-    ((make-trans :Note))
-        
-   
-
+       ((make-trans :Accidental))
+       ((make-trans :Note))
    )
  )
   
