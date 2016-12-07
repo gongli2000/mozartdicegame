@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ReplState" timestamp="1481146233002">{:repl-history {:ide [], :local [&quot;(+ 34 4)&quot; &quot;(ns overtone.core  \n  (:use [leipzig melody scale live chord]\n        [overtone.inst.piano]\n   )\n  (:require [overtone.live :as ot]))&quot; &quot;overtone.core/p&quot; &quot;(use 'overtone.core)&quot; &quot;p&quot; &quot;p2&quot; &quot;(make-trans :Pitch)&quot;], :remote []}}</component>
+</project>

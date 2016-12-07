@@ -56,11 +56,14 @@
                      [:Note [:Pitch (str pc "b") octave ]]
                      [:Note [:Pitch (str pc "b") octave]  (note 2)]))))
    })
-   
+
+
+;; test comiit
 (defn make-trans[key]
   (fn [tree]
       (insta/transform 
         {key (transform-funcs key) }
+
         tree)))
 
           

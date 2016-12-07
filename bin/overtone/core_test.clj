@@ -27,16 +27,16 @@
   `(deftest ~testname
       ~@body)))
 
-(maketests simpletests
-"G" [:ABC [:Note "G"]],
-"G3" [:ABC [:Note "G" 1/3]],
-"G1/3" [:ABC [:Note "G" 1/3]],
-"G/"  [:ABC [:Note "G" 1/2]] ,
-"G,,,"  [:ABC [:Note "G-3"]],
-"G'''"  [:ABC [:Note "G3"]]
-)
+;(maketests simpletests
+;"G" [:ABC [:Note "G"]],
+;"G3" [:ABC [:Note "G" 1/3]],
+;"G1/3" [:ABC [:Note "G" 1/3]],
+;"G/"  [:ABC [:Note "G" 1/2]] ,
+;"G,,,"  [:ABC [:Note "G-3"]],
+;"G'''"  [:ABC [:Note "G3"]]
+;)
 
-(run-tests)
+;(run-tests)
 ;  
 
 
@@ -64,9 +64,9 @@
 
 (applytrans (abcparser "g/"))
 ;(applytrans (abcparser "^g"))
-;(doseq  [i (range 20)]
-;  (println i (rh i))
-;  (println (applytrans (abcparser (rh i))) "\n"))
+(doseq  [i (range 20)]
+  (println i (rh i))
+  (println (applytrans (abcparser (rh i))) "\n"))
 
 
 
