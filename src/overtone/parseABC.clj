@@ -81,7 +81,10 @@
    )
  )
   
-
+(defn get-pitch-dur[pitch-dur-vec] ; [[1,2] , [3,4]]
+  (list
+    (apply vector (map #(% 0) pitch-dur-vec))
+    (apply vector (map #(% 1) pitch-dur-vec))))
 
   
 
