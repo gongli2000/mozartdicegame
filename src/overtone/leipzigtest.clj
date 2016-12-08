@@ -3,8 +3,8 @@
               [leipzig.melody :refer :all]
               [leipzig.chord :refer :all]
               [instaparse.core :as insta]
-              [overtone.grammar  :refer :all]
-              [overtone.parseABC :refer :all ] 
+              [overtone.grammar  :as grammar]
+              [overtone.parseABC :as parser ] 
               [leipzig.live :as live]
               [overtone.inst.piano]))
 
@@ -32,13 +32,28 @@
 (defmethod live/play-note :bass [{midi :pitch seconds :duration}]
   (-> midi midi->hz (/ 2) (seeth seconds)))
 
-;
-(->>
-  (phrase (repeat 1/4)
-          [{1  60 2 80 } {1  60 2 50 } 59 79 89 {1  60 2 70 }])
-  (all :part :leader)
-  (where :time (bpm 120))
-  (live/play))
+(defn myplay[speed parser-notes]
+  (let [durations #(map (% 1)) parser-notes
+        pitches #(map (% 0)) parser-notes]
+	(->>
+	  (phrase durations pitches)
+	  (all :part :leader)
+	  (where :time (bpm speed))
+	  (live/play))))
 
-        
+(myplay  80 (repeat 1/4)
+	       [{1  60 2 80 } {1  60 2 50 } 59 79 89 {1  60 2 70 }])
+
+
+(def abcparser (parser/get-parser (grammar/get-grammar)))
+
+(def rh
+  (apply vector 
+    (rest (->>
+            (slurp (clojure.java.io/resource "abcRH.txt"))
+            (clojure.string/split-lines)
+            ))))
+
+
+(parser/applytrans (abcparser (rh 1)))
         
