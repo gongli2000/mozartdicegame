@@ -1,7 +1,6 @@
 (ns overtone.parseABC
  (:use    [overtone.music.pitch])
  (:require [instaparse.core :as insta]
-        
            [overtone.miditransform :as m]))
 
 (:midi-note (note-info "c4"))
@@ -38,8 +37,8 @@
    :Note (fn [ & args  ]
            (let [p (first args)]
            (case (count args)
-               1 [ (str (p 1) (p 2)) default-duration]
-               2 [ (str (p 1) (p 2))(second args)])
+               1 [ (note (str (p 1) (p 2))) default-duration]
+               2 [ (note (str (p 1) (p 2))) (second args)])
                ))
    :Commas (fn [& args] (count (apply str args))),
    :Apos (fn [& args] (count (apply str args))),
@@ -86,5 +85,7 @@
     (apply vector (map #(% 0) pitch-dur-vec))
     (apply vector (map #(% 1) pitch-dur-vec))))
 
-  
+(defn get-parser[grammar] (insta/parser grammar    
+                           :auto-whitespace  
+                           (insta/parser "whitespace = #'\\s+'")))
 

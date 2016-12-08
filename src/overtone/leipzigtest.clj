@@ -2,6 +2,9 @@
    (:require [overtone.live :refer :all]
               [leipzig.melody :refer :all]
               [leipzig.chord :refer :all]
+              [instaparse.core :as insta]
+              [overtone.grammar  :refer :all]
+              [overtone.parseABC :refer :all ] 
               [leipzig.live :as live]
               [overtone.inst.piano]))
 
@@ -31,9 +34,10 @@
 
 ;
 (->>
-  (phrase (repeat 1/16)
-          [{1  60 2 70 } 89 {1  60 2 70 } {1  60 2 70 }])
+  (phrase (repeat 1/4)
+          [{1  60 2 80 } {1  60 2 50 } 59 79 89 {1  60 2 70 }])
   (all :part :leader)
+  (where :time (bpm 120))
   (live/play))
 
         

@@ -7,6 +7,15 @@
    
 (defmethod play-note :default [{midi :pitch}] (piano midi))
 
+(defn make-phrase [notes-vec]
+  (apply vector
+         (map #(hash-map :pitch (% 0) :duration (% 1)) notes-vec)))
+
+(map #(phrase [(% 1)] [(% 0)]  ) [[60 1] [70 1] [70 1] [70 1] [70 1] [70 1] [70 1] ])
+
+(phrase [60 10] [1 1])
+
+
 ;(defn play-melody 
 ;  [pitches durations]
 ;  (->> (phrase durations pitches)
