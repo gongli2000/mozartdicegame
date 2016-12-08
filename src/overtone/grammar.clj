@@ -35,7 +35,8 @@
      Rest = 'z'
      TimeQualifier =  ('<' | '>' | '<<' | '>>') \n"
     )
-  (def grammar (str grammar1 "Pitch = " notelist))
+  
+  (defn get-grammar[] (str grammar1 "Pitch = " notelist))
 
 
 

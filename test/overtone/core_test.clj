@@ -6,13 +6,15 @@
      [overtone.music.pitch :refer :all]
      [clojure.test :refer :all]
       [instaparse.core :as insta]
-      [overtone.grammar  :refer :all]
-      [overtone.parseABC :refer :all ] 
+      [overtone.grammar  :as grammar]
+      [overtone.parseABC :as parser ] 
             ))
 
-(def abcparser (insta/parser grammar    
-                  :auto-whitespace  
-                  (insta/parser "whitespace = #'\\s+'")))
+(def abcparser (parser/get-parser (grammar/get-grammar)))
+;  
+;  (insta/parser grammar    
+;     :auto-whitespace  
+;     (insta/parser "whitespace = #'\\s+'")))
 
 (def rh
   (apply vector 
@@ -23,7 +25,7 @@
 
 (defmacro maketests [testname  & arglist]
   (let [body (for [[k,v] (apply hash-map arglist)]
-               `(is (= (applytrans (abcparser ~k)) ~v)))]
+               `(is (= (parser/applytrans (abcparser ~k)) ~v)))]
   `(deftest ~testname
       ~@body)))
 
@@ -42,21 +44,19 @@
 (apply vector (map #(% 1) x))
 
 
-(run-tests)
-;  
 
 
-(defn unizipvector[v]
-  (loop [notes []
-         durations []
+(def notes (rest (parser/applytrans (abcparser "abcd"))))
+(def pitches (map #(% 0) notes))
+(def durations (map #(% 1) notes))
 
-
-
+(doseq [x (phrase durations pitches)]
+  (println x))
 
 
 (doseq  [i (range 20)]
   (println i (rh i))
-  (println (applytrans (abcparser (rh i))) "\n"))
+  (println (parser/applytrans (abcparser (rh i))) "\n"))
 
 
 
