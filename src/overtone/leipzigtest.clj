@@ -32,7 +32,7 @@
 (defmethod live/play-note :bass [{midi :pitch seconds :duration}]
   (-> midi midi->hz (/ 2) (seeth seconds)))
 
-(defn myplay[speed durations pitches]
+(defn myplay[speed [(durations pitches)]]
 	(->>
 	  (phrase durations pitches)
 	  (all :part :leader)
@@ -40,8 +40,9 @@
 	  (live/play)))
 
 (defn get-notes [parser-notes]
-    (let [durations (map #(% 1) parser-notes)
-          pitches (map #(% 0) parser-notes)]
+    (let [p (rest parser-notes)
+          durations (map #(% 1) p)
+          pitches (map #(% 0) p)]
       (list durations pitches)))
 
 ;; dasfsdfsadfddfasdffds
@@ -65,7 +66,6 @@
     (parser/applytrans)))
 
 
-(def notes (parser-notes (rh 6)))
-
+(def notes (get-notes (parser-notes (rh 20))))
 (apply myplay  (conj notes 20))
         
