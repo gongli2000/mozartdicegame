@@ -44,6 +44,7 @@
           pitches (map #(% 0) parser-notes)]
       (list durations pitches)))
 
+;; dasfsdfsadfd
 (myplay  80 (repeat 1/4)
 	       [{1  60 2 80 } {1  60 2 50 } 59 79 89 {1  60 2 70 }])
 
